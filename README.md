@@ -1,2 +1,2 @@
-# C--GROUP-PROJECT
+# CS-GROUP-PROJECT
 This is a group project that has  basic C#  applications
