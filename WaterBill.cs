@@ -1,4 +1,4 @@
-﻿using System;
+﻿/* using System;
 
 namespace MyApp
 {
@@ -6,29 +6,42 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            string usageType;
-            double volumeUsed = 0;
-            double amount = 0;
-
-
             Console.WriteLine("*****************");
             Console.WriteLine("     WELCOME     ");
             Console.WriteLine("*****************");
 
+            string usageType = GetUsageType();
+            double volumeUsed = GetVolumeUsed();
+            GetWaterBill(usageType, volumeUsed);
+            Console.WriteLine("....Thank you for your time....");
+        }
 
-            do
+        static string GetUsageType()
+        {
+            string usageType;
+
+            //Getting the usage Type
+            Console.WriteLine("Kindly choose your usage type ?\n 1) Residential\n 2) Commercial\n 3) Industrial");
+            usageType = Console.ReadLine();
+
+            //Handle case senstivity
+            usageType = usageType.ToLower();
+
+            while (usageType != "residential" && usageType != "commercial" && usageType != "industrial" && usageType != "1" && usageType != "2" && usageType != "3")
             {
-                //Getting the usage Type
-                Console.WriteLine("Kindly choose your usage type ?\n 1) Residential\n 2) Commercial\n 3) Industrial");
-
+                Console.WriteLine("Kindly choose one the above options ?");
                 usageType = Console.ReadLine();
 
                 //Handle case senstivity
                 usageType = usageType.ToLower();
 
-            } while (usageType != "residential" && usageType != "commercial" && usageType != "industrial" && usageType != "1" && usageType != "2" && usageType != "3");
+            }
+            return usageType;
+        }
 
-            // Getting the volume used 
+        static double GetVolumeUsed()
+        {
+            double volumeUsed;
             try
             {
                 Console.WriteLine("Enter the volume used in cubic meters ?");
@@ -42,6 +55,12 @@ namespace MyApp
                 volumeUsed = Convert.ToDouble(Console.ReadLine());
             }
 
+            return volumeUsed;
+        }
+
+        static void GetWaterBill(string usageType, double volumeUsed)
+        {
+            double amount;
             switch (usageType)
             {
                 case "residential":
@@ -62,8 +81,15 @@ namespace MyApp
                     Console.Write("Your water bill is :");
                     Console.WriteLine($"{volumeUsed} * 35.75 =  ksh {amount}.");
                     break;
+                default:
+                    amount = volumeUsed * 0.00;
+                    Console.Write("Your water bill is :");
+                    Console.WriteLine($"{volumeUsed} * 35.75 =  ksh {amount}.");
+                    break;
             }
-            Console.WriteLine("....Thank you for your time....");
+
         }
     }
 }
+
+ */
