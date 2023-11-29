@@ -10,3 +10,7 @@ ALLAN AVOSA - S13/07835/22
 EDWIN MWANGI - S13/07790/22
 SIMON MACHARIA - S13/07773/22
 DENNIS MUIA - S13/10502/22
+
+We divided ourselves into two-man subgroups to handle different tasks in the group project.
+After we were all done we meet on Thursdays eveninig to discuss.
+Due to Codevelopment issues. I was the one who pushed all the code to github.
